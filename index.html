@@ -923,7 +923,18 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
 .fnote-a{color:inherit;text-decoration:underline}
 .fnote-ta{width:100%;margin-top:12px;min-height:130px;background:transparent;color:inherit;border:1px solid currentColor;border-radius:2px;padding:10px;font-family:inherit;font-size:13px;line-height:1.55}
 .fnote-b{margin-top:10px;padding:9px 16px;font-size:12.5px;border-color:currentColor;color:inherit}
-.note.ok{color:var(--ok)}
+.note.ok{
+  opacity:1;color:inherit;display:flex;align-items:flex-start;gap:11px;
+  border:1px solid currentColor;border-radius:var(--r);
+  padding:14px 16px;font-size:13.5px;line-height:1.6;
+  animation:okIn .5s cubic-bezier(.16,1,.3,1) backwards
+}
+.note.ok .ok-i{
+  flex:0 0 auto;width:21px;height:21px;border-radius:50%;margin-top:1px;
+  background:var(--accent);color:var(--accent-ink);display:grid;place-items:center
+}
+.note.ok b{font-weight:600}
+@keyframes okIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
 /* ---- expertise chips on phones: show all five, re-placed to frame the photo ---- */
 @media(max-width:760px){
@@ -2317,15 +2328,23 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
       note.classList.remove('ok');
       note.textContent='Sending…'; note.style.opacity='1';
 
+      /* these key names become the row labels in the email you receive,
+         so it reads as a proper enquiry sheet, not raw form fields */
       var payload={
-        name: name,
-        email: mail,
-        'What this is about': type,
-        message: msg,
-        _subject: 'hamadshafiq.com — ' + type + ' — ' + name + ' (' + mail + ')',
+        'Name': name,
+        /* lowercase 'email' on purpose: this is the field name the mail
+           service looks for to address the auto-reply and the Reply-To */
+        'email': mail,
+        'Enquiry': type,
+        'Message': msg,
+        'Received': new Date().toLocaleString('en-GB',{dateStyle:'full',timeStyle:'short'}),
+        'Source': 'Contact form — hamadshafiq.com',
+        _subject: 'New enquiry — ' + type + ' — ' + name,
         _replyto: mail,
-        _template: 'table',
-        _captcha: 'false'
+        _template: 'box',
+        _captcha: 'false',
+        /* automatic acknowledgement sent to the visitor */
+        _autoresponse: 'Thanks for getting in touch.\n\nYour message has reached me. I read every enquiry myself, so you are not in a queue somewhere — you can expect a proper reply from me within one business day, usually sooner.\n\nIf it is time-sensitive, WhatsApp is the fastest way to reach me: +92 306 0647571.\n\nFor context while you wait: I am a senior full stack engineer with 8 years building production systems — Next.js, Node, NestJS, Python and PostgreSQL — and I now spend most of my time building AI agents and automation. 100% Job Success on Upwork, Top Rated on Fiverr.\n\nSpeak soon,\n\nHamad Shafiq\nSenior Full Stack & AI Engineer\nhamad@hamadshafiq.com · hamadshafiq.com\nlinkedin.com/in/hamadpk'
       };
 
       /* a preview frame or a file:// page cannot make outside requests -
@@ -2353,7 +2372,12 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
           if(ok){
             form.reset();
             note.classList.add('ok');
-            note.textContent='Thanks '+name.split(' ')[0]+' — that landed in my inbox. I reply within one business day.';
+            var first=(name.split(' ')[0]||'').replace(/[<>&"]/g,'');
+            note.innerHTML='<span class="ok-i" aria-hidden="true"><svg viewBox="0 0 20 20" width="12" height="12">'+
+              '<path d="M4 10.4l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+              '<span><b>Message sent.</b> Thanks '+first+' — it is in my inbox now, and a '+
+              'confirmation is on its way to you. I read everything myself and reply '+
+              'within one business day.</span>';
             note.style.opacity='1';
           } else {
             compose(name,mail,type,msg,failLead);
