@@ -134,21 +134,3 @@ clip arrived at 15 MB and ships at 438 KB. To compress your own:
            -pix_fmt yuv420p -movflags +faststart -an output.mp4
 
 Aim for under 2 MB per clip and 30–60 seconds.
-
----
-
-## Contact form — one-time activation
-
-The form posts to FormSubmit (free, no account, no API key).
-
-1. Deploy the site.
-2. Go to your live site and send yourself one test message through the form.
-3. FormSubmit emails **hamad@hamadshafiq.com** an activation link. Click it once.
-4. Done. Every message from then on arrives instantly, with the sender's
-   address set as Reply-To, so you can just hit Reply.
-
-Until you click that link nothing is delivered, so do step 2 the day you
-deploy. If a submission ever fails, the form shows the visitor the message
-ready to copy and your email address — it never fails silently.
-
-To switch providers, edit `FORM_ENDPOINT` near the bottom of index.html.
