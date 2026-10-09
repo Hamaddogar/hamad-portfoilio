@@ -2078,6 +2078,10 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
          label:'Barcode scan — packaged food, no model call',
          cap:'Packaged food never touches the vision model. The camera reads the barcode straight to a product lookup and returns verified pack data in about a second. Note the amber hint when a frame will not read, and the manual-entry field behind it: the flow still completes when the camera cannot.'},
 
+        {type:'image', src:'media/nuvita-capture.jpg', phone:true,
+         label:'Camera-first capture — a real plate, not a stock shot',
+         cap:'The capture step on an actual breakfast: boiled egg, almonds, seeds, dates, roasted chana and milk. A mixed plate like this is the hard case for photo nutrition tracking, which is exactly why it is the one worth showing.'},
+
         {type:'image', src:'media/nuvita-detected.jpg', phone:true,
          label:'Detected foods — the model is never trusted blind',
          cap:'Each detected item carries its source and a confidence score, and every field is editable. This is the design decision the whole product rests on: the model identifies the food, USDA supplies the numbers, and the user confirms before anything is saved.'},
