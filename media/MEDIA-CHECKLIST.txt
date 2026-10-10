@@ -1,0 +1,65 @@
+MEDIA FILES CHECKLIST — hamadshafiq.com
+========================================
+
+Put your existing screenshots and videos in THIS folder with these exact names.
+Names are case-sensitive: posh-01-login.jpg is not the same as Posh-01-Login.JPG.
+Total: 47 project files, plus og-image.jpg (already included) (7 videos, 40 images).
+
+[ ] Nuvita (13 files)
+    [ ] nuvita-barcode-poster.jpg
+    [ ] nuvita-barcode.mp4
+    [ ] nuvita-breakfast-poster.jpg
+    [ ] nuvita-breakfast.mp4
+    [ ] nuvita-capture.jpg
+    [ ] nuvita-coaching.jpg
+    [ ] nuvita-cover.jpg
+    [ ] nuvita-detected.jpg
+    [ ] nuvita-hydration.jpg
+    [ ] nuvita-overview-poster.jpg
+    [ ] nuvita-overview.mp4
+    [ ] nuvita-premium.jpg
+    [ ] nuvita-weight.jpg
+
+[ ] FixFinanz (12 files)
+    [ ] fixfinanz-admin-poster.jpg
+    [ ] fixfinanz-admin.mp4
+    [ ] fixfinanz-calendar.jpg
+    [ ] fixfinanz-campaigns.jpg
+    [ ] fixfinanz-customer-poster.jpg
+    [ ] fixfinanz-customer.mp4
+    [ ] fixfinanz-dashboard.jpg
+    [ ] fixfinanz-directory.jpg
+    [ ] fixfinanz-landing-full.jpg
+    [ ] fixfinanz-landing-thumb.jpg
+    [ ] fixfinanz-pipeline.jpg
+    [ ] fixfinanz-teampro.jpg
+
+[ ] OverZaki (6 files)
+    [ ] overzaki-catalogue-poster.jpg
+    [ ] overzaki-catalogue.mp4
+    [ ] overzaki-dashboard-poster.jpg
+    [ ] overzaki-dashboard.mp4
+    [ ] overzaki-hero.jpg
+    [ ] overzaki-payments.jpg
+
+[ ] PoshTextiles (16 files)
+    [ ] posh-01-login.jpg
+    [ ] posh-02-match.jpg
+    [ ] posh-03-order.jpg
+    [ ] posh-04-pickmodal.jpg
+    [ ] posh-05-quote.jpg
+    [ ] posh-06-label.jpg
+    [ ] posh-07-orders.jpg
+    [ ] posh-08-leads.jpg
+    [ ] posh-09-inventory.jpg
+    [ ] posh-10-addrval.jpg
+    [ ] posh-11-cards.jpg
+    [ ] posh-12-cardmodal.jpg
+    [ ] posh-13-salesorder.jpg
+    [ ] posh-14-pick.jpg
+    [ ] posh-15-inspection.jpg
+    [ ] posh-16-addrmodal.jpg
+
+After uploading, test one in a browser:
+  https://hamadshafiq.com/media/nuvita-cover.jpg
+If it shows the picture, the folder is in the right place.
