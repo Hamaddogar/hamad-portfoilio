@@ -1,0 +1,46 @@
+# Muhammad Hamad (Hamad Shafiq)
+
+> Senior Full-Stack & AI Engineer based in Pakistan (UTC+5), open to full-time remote roles. 8 years shipping 10+ live products for startups in the USA, Germany and the Middle East. Strongest in TypeScript (Next.js, NestJS) and Python (FastAPI), with PostgreSQL, and in building LLM features that work reliably in production.
+
+Also known as: Hamad Shafiq, Hamaddogar (GitHub).
+
+## Contact
+
+- Website: https://www.hamadshafiq.com/
+- Email: hamad@hamadshafiq.com
+- LinkedIn: https://www.linkedin.com/in/hamadpk/
+- GitHub: https://github.com/Hamaddogar
+- Upwork: https://www.upwork.com/freelancers/~012f1207ff8f73223d
+- Availability: Full-time remote, senior full-stack or AI product engineer roles
+
+## Skills
+
+- Languages: TypeScript, JavaScript, Python, SQL
+- Frontend: React, Next.js, Redux Toolkit, Tailwind CSS, Material UI
+- Backend: NestJS, Node.js, Express, FastAPI, Pydantic, REST APIs, webhooks, Socket.io
+- Data: PostgreSQL, Supabase, Prisma, MongoDB, MySQL, Redis, Firebase
+- AI / LLM: OpenAI API (vision, structured output), Claude API, prompt engineering, LLM fallbacks, caching and usage limits
+- Integrations: Stripe, Meta Graph API, FedEx / UPS, Authorize.Net, OAuth 2.0
+- Tooling: Docker, Jest, Vercel, GitHub
+
+## Experience
+
+- Nuvita — Full-Stack Engineer (Python · LLM), Apr 2026 – present. AI nutrition app: LLM Vision pipeline with strict JSON-schema output, every detected food checked against USDA data, rule-based coaching engine with LLM personalisation, Stripe billing, Fitbit sync.
+- FixFinanz (https://fixfinanz.de) — Senior Full-Stack Developer, May 2025 – Mar 2026. CRM for financial advisors in Germany: NestJS modular monolith, role-based dashboards, Meta lead ingestion for 1,000+ leads a month, booking state machine (~80% fewer conflicts), 90%+ test coverage.
+- Bullseyes.ai (https://bullseyes.ai) — Full-Stack Developer, Oct 2024 – Jan 2025. Async Python services (35% faster campaign processing), real-time Socket.io for 200+ concurrent sessions.
+- OverZaki (https://overzaki.com) — Frontend Developer, Dec 2023 – Sep 2024. Storefront builder: live theme preview, Lighthouse accessibility 61 → 89.
+- FlySmartDeals (https://flysmartdeals.com) — Frontend Developer, Jun 2023 – Nov 2023. Duffel API integration, 30% faster search, 15% conversion lift.
+- G3MS (https://getg3ms.com) — Backend Developer, Feb 2023 – May 2023. Firebase real-time backend for a K–12 learning platform.
+- PoshTextiles (https://poshtextiles.com) — Full-Stack Developer, Aug 2021 – Jan 2023. Warehouse and shipping system, 500+ shipments a month, 90% fewer manual shipping errors.
+- Digital Media Flow LLC, New York — Full-Stack Developer, Jun 2020 – Aug 2021. React and Node.js apps for 10+ agency clients.
+- Earlier: X Logic Solutions (2018 – 2019), GamicaCloud (2017 – 2018).
+
+## Education
+
+- B.S. Computer Science Engineering — GC University, Pakistan (2015 – 2019)
+- Winner, Programmer Competition 2019 — appreciation letter from the President of Pakistan
+
+## Optional
+
+- Case studies: https://www.hamadshafiq.com/#work
+- References (on request): Martin Zenner (CEO, FixFinanz), Robert Romulus (Co-founder, Digital Media Flow LLC), Maher Ahmad Alkhawndi (CEO, OverZaki)

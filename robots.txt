@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.hamadshafiq.com/sitemap.xml
+
+# Summary for AI assistants: https://www.hamadshafiq.com/llms.txt
