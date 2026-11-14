@@ -1407,7 +1407,7 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
   <div class="wrap">
     <div class="sec-head rv">
       <h2>Selected full-stack &amp; AI projects</h2>
-      <span class="mono">Four builds &middot; 2021&ndash;2026</span>
+      <span class="mono">Five builds &middot; 2021&ndash;2026</span>
     </div>
 
     <!-- CASE 1 -->
@@ -1510,6 +1510,37 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
     <article class="case rv">
       <div class="case-top">
         <span class="idx">04</span>
+        <h3>DW Digital — Kapazitätsplaner</h3>
+        <span class="yr">Internal system · Germany · 2026</span>
+      </div>
+      <p class="case-sub">A sales capacity and customer lifecycle planner for a German agency, rebuilt from a single-user browser-storage app into a multi-user system for a team of 16.</p>
+      <div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span><span class="chip">Tailwind CSS</span><span class="chip">shadcn/ui</span></div>
+
+      <div class="case-body">
+        <div class="blocks">
+          <div class="blk"><div class="k">The problem</div><div class="v">The business ran on one question it could not answer quickly: <em>who still has capacity?</em> Salesperson slots, customer status, call targets, onboarding and absences were spread across a tool that only one person could use at a time. Nobody could see target against actual without asking.</div></div>
+          <div class="blk"><div class="k">The technical problem</div><div class="v">The existing app was plain HTML and JavaScript storing everything in <strong>browser storage and JSON files</strong>. That works for one user. For <strong>16 employees sharing the same data</strong> it has no concurrency, no permissions and no history — and whoever saved last won. The business logic inside it, though, was years of real operational knowledge and could not be thrown away.</div></div>
+          <div class="blk broke"><div class="k">What was hard</div><div class="v">Migrating live data exactly once. I built the import as a <strong>dry run first</strong>, which validates the legacy JSON without touching business data, then a guarded execute: the source file is content-hashed, a <strong>new hash against a non-empty target is refused</strong>, and re-running the same hash reconciles instead of duplicating. Every attempt, successful or failed, is kept in a migration history.</div></div>
+          <div class="blk"><div class="k">The result</div><div class="v">One system the whole team works in. Yearly capacity across <strong>6 slots per salesperson</strong>, daily target-versus-actual by month, the customer lifecycle from pipeline through onboarding to renewal or cancellation, and absences that adjust targets automatically. <strong>Five operative roles</strong> decide who sees what — revenue figures are held in a separate table and are visible to system administrators only.</div></div>
+        </div>
+        <aside class="media">
+          <button class="pcard" type="button" data-project="dwdigital" aria-haspopup="dialog">
+              <img src="media/dw-cover.jpg" alt="DW Digital Kapazitätsplaner yearly capacity planning board built with Next.js, Supabase and PostgreSQL by Muhammad Hamad" loading="lazy">
+              <span class="pc-ov"><span class="pc-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="pc-t">Watch demo · open project</span></span>
+            </button>
+          <div class="mtr">
+            <div><span class="lb">Users on one system</span><span class="vl">1 → 16</span></div>
+            <div><span class="lb">Operative roles</span><span class="vl">5</span></div>
+            <div><span class="lb">Slots per salesperson</span><span class="vl">6</span></div>
+            <div><span class="lb">Legacy migration</span><span class="vl">Hash-guarded</span></div>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <article class="case rv">
+      <div class="case-top">
+        <span class="idx">05</span>
         <h3>PoshTextiles</h3>
         <span class="yr"><a class="livelink" href="https://poshtextiles.com/" target="_blank" rel="noopener">poshtextiles.com &#8599;</a> &middot; Aug 2021 &rarr; Jan 2023</span>
       </div>
@@ -2011,6 +2042,7 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
   /* ---------- project lightbox ---------- */
   var UPWORK_FIXFINANZ = 'https://www.upwork.com/freelancers/~012f1207ff8f73223d?p=2045559645150879744';
   var UPWORK_PROFILE   = 'https://www.upwork.com/freelancers/~012f1207ff8f73223d';
+  var LINKEDIN         = 'https://www.linkedin.com/in/hamadpk/';
 
   var PROJECTS = {
     fixfinanz: {
@@ -2135,6 +2167,58 @@ footer{padding-block:30px 40px;border-top:1px solid var(--line);margin-top:0}
         {type:'image', src:'media/overzaki-payments.jpg', thumb:'media/overzaki-payments.jpg',
          label:'Payment gateway hub',
          cap:'Fifteen payment providers behind one integration: Stripe and PayPal alongside the providers that actually matter in the Gulf \u2014 tap, tamara, tabby, SkipCash, HESABE, myFatoorah, SADAD, upayments, amwal, deema, Klickpay, BOOKEEY and \u062a\u0627\u0644\u064a. A merchant switches provider without touching their storefront.'}
+      ]
+    },
+    dwdigital: {
+      title: 'DW Digital — Kapazit\u00e4tsplaner for sales capacity and customer lifecycle',
+      role: 'Full-Stack Developer (Next.js \u00b7 Supabase)',
+      when: '2026 \u00b7 Germany \u00b7 internal system',
+      link: LINKEDIN,
+      linkLabel: 'More on LinkedIn',
+      desc: [
+        'An internal planning system for a German agency, rebuilt from a single-user HTML and JavaScript app that kept everything in <strong>browser storage and JSON files</strong> into a multi-user platform on <strong>Next.js, React, TypeScript, Supabase and PostgreSQL</strong>.',
+        'I reverse-engineered the existing system first \u2014 customers, contracts, capacity, targets, pipeline, absences and onboarding \u2014 then modelled it relationally: user \u2192 employee \u2192 role, customer \u2192 assignment \u2192 capacity slot, planning \u2192 Soll \u2192 Ist \u2192 performance, absence \u2192 workdays \u2192 adjusted target.',
+        '<strong>Five operative roles</strong> (system administrator, manager, salesperson, fulfillment and acquisition) govern access, with revenue held in a separate table visible to administrators only, an audit trail over operational changes, and a <strong>content-hashed, dry-run-first legacy migration</strong> that cannot run twice by accident.',
+        'The interface is German throughout, because the people using it are.'
+      ],
+      skills: ['Next.js','React','TypeScript','Supabase','PostgreSQL','Row-level security','Tailwind CSS','shadcn/ui'],
+      stats: [['Users on one system','1 \u2192 16'],['Operative roles','5'],['Capacity slots / rep','6'],['Legacy migration','Hash-guarded']],
+      media: [
+        {type:'video', src:'media/dw-kapazitaet.mp4', poster:'media/dw-kapazitaet-poster.jpg', thumb:'media/dw-kapazitaet-poster.jpg',
+         label:'Full walkthrough \u2014 role-based access across every module',
+         cap:'Two and a half minutes through the whole system: yearly capacity, monthly planning, customers, fulfillment, acquisition, then the administration side \u2014 roles, settings, migration and audit. German business interface, English narration.'},
+
+        {type:'image', src:'media/dw-year.jpg', thumb:'media/dw-year.jpg',
+         label:'Jahres\u00fcbersicht \u2014 capacity and backlog in one view',
+         cap:'Each salesperson has six capacity slots across the year, with customers assigned as bars. The banner answers the question the business actually asks: 51% of target to date, 14 customers behind, 36,630 calls missing \u2014 and which ones. Pipeline customers deliberately do not consume capacity.'},
+
+        {type:'image', src:'media/dw-month.jpg', thumb:'media/dw-month.jpg',
+         label:'Monatsansicht \u2014 daily target against actual',
+         cap:'Day-level planning per employee and month. The amber panel flags the specific inconsistency that breaks this kind of planner: a customer has a monthly target but no suitable planned working days to spread it over. Manually fixed daily values survive recalculation rather than being overwritten.'},
+
+        {type:'image', src:'media/dw-customers.jpg', thumb:'media/dw-customers.jpg',
+         label:'Kunden \u2014 the customer lifecycle',
+         cap:'Pipeline \u2192 onboarding \u2192 active \u2192 renewal or cancellation \u2192 inactive, with the assigned salesperson, contract start and end, and a cancellation marker. Unassigned customers show as such, so capacity gaps surface here rather than in a meeting.'},
+
+        {type:'image', src:'media/dw-newcustomer.jpg', thumb:'media/dw-newcustomer.jpg',
+         label:'Where the permission model becomes concrete',
+         cap:'Creating a customer. Everything here is operational master data except one field \u2014 revenue \u2014 which is stored in a separate <code>customer_financials</code> table and only ever shown to a system administrator. Splitting it at the schema rather than hiding it in the UI is what makes the role model hold.'},
+
+        {type:'image', src:'media/dw-fulfillment.jpg', thumb:'media/dw-fulfillment.jpg',
+         label:'Fulfillment \u2014 onboarding templates and open tasks',
+         cap:'Onboarding runs from a reusable task template with an owner per task, so a new customer reaches <em>Startklar</em> \u2014 ready to start \u2014 through the same checklist every time instead of whatever the last person remembered.'},
+
+        {type:'image', src:'media/dw-acquisition.jpg', thumb:'media/dw-acquisition.jpg',
+         label:'Akquise \u2014 activity and goals',
+         cap:'Calls, appointments, direct dials and mobile numbers tracked per person against goals, by week, month or year, with a team leaderboard and a trend line. The same numbers roll up into the capacity picture rather than living in a separate spreadsheet.'},
+
+        {type:'image', src:'media/dw-roles.jpg', thumb:'media/dw-roles.jpg',
+         label:'Benutzer & Rollen \u2014 exactly five roles, and a lockout guard',
+         cap:'Application access is system-administrator only, and the screen holds no passwords or auth secrets \u2014 it assigns operative roles and links a login to an employee record. The last remaining system administrator cannot be removed or deactivated, which is the small guard that stops an organisation locking itself out of its own system.'},
+
+        {type:'image', src:'media/dw-migration.jpg', thumb:'media/dw-migration.jpg',
+         label:'Daten / Import-Export \u2014 the migration, guarded',
+         cap:'The part that had to be right once. The legacy JSON is validated in a dry run that changes nothing, then executed against a content hash: a new hash against a non-empty target is blocked, the same hash reconciles without duplicates, and an empty target allows the controlled takeover. Every run is kept, failures included.'}
       ]
     },
     posh: {
